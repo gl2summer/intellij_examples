@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="javafxdemo">
+    <output-path>$PROJECT_DIR$/out/artifacts/javafxdemo</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="sample" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="javafxdemo.jar">
+        <element id="module-output" name="javafxdemo" />
+      </element>
+      <element id="library" level="project" name="mysql:mysql-connector-java:6.0.6" />
+    </root>
+  </artifact>
+</component>
