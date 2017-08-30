@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="223.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="queryButton" layoutX="381.0" layoutY="14.0" mnemonicParsing="false" onAction="#onQueryButton" text="查询" />
+      <Button fx:id="addButton" layoutX="381.0" layoutY="44.0" mnemonicParsing="false" onAction="#onAddButton" text="增加" />
+      <Button fx:id="deleteButton" layoutX="381.0" layoutY="74.0" mnemonicParsing="false" onAction="#onDeleteButton" text="删除" />
+      <Button fx:id="updateButton" layoutX="381.0" layoutY="104.0" mnemonicParsing="false" onAction="#onUpdateButton" text="修改" />
+      <TableView fx:id="table" editable="true" layoutX="9.0" layoutY="7.0" prefHeight="211.0" prefWidth="341.0">
+        <columns>
+           <TableColumn fx:id="t_isnew" prefWidth="55.0" text="NEW" />
+           <TableColumn fx:id="t_id" prefWidth="42.0" text="ID" />
+           <TableColumn fx:id="t_code" prefWidth="42.0" text="CODE" />
+           <TableColumn fx:id="t_mac" prefWidth="237.0" text="MAC" />
+        </columns>
+      </TableView>
+      <Button fx:id="createButton" layoutX="381.0" layoutY="192.0" mnemonicParsing="false" onAction="#onCreateButton" text="创建" />
+   </children>
+</Pane>
