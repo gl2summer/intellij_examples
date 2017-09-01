@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane prefHeight="223.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane prefHeight="223.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
    <children>
       <Button fx:id="queryButton" layoutX="381.0" layoutY="14.0" mnemonicParsing="false" onAction="#onQueryButton" text="查询" />
       <Button fx:id="addButton" layoutX="381.0" layoutY="44.0" mnemonicParsing="false" onAction="#onAddButton" text="增加" />

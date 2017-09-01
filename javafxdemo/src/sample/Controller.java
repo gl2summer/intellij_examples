@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -68,6 +69,32 @@ class SampleData{
     }
 }
 
+class SampleData2{
+    private SimpleBooleanProperty isNew;
+    private SimpleIntegerProperty id;
+    private SimpleStringProperty code;
+    private SimpleStringProperty mac;
+
+    public SampleData2(Boolean isNew, Integer id, String code, String mac) {
+        this.isNew = new SimpleBooleanProperty(isNew);
+        this.id = new SimpleIntegerProperty(id);
+        this.code = new SimpleStringProperty(code);
+        this.mac = new SimpleStringProperty(mac);
+    }
+
+    public BooleanProperty isNewProperty(){
+        return isNew;
+    }
+    public IntegerProperty idProperty(){
+        return id;
+    }
+    public StringProperty codeProperty(){
+        return code;
+    }
+    public StringProperty macProperty(){
+        return mac;
+    }
+}
 
 
 
@@ -90,17 +117,17 @@ public class Controller {
     @FXML
     private Button createButton;
     @FXML
-    private TableView<SampleData> table;
+    private TableView<SampleData2> table;
     @FXML
-    private TableColumn<SampleData, Boolean> t_isnew;
+    private TableColumn<SampleData2, Boolean> t_isnew;
     @FXML
-    private TableColumn<SampleData, Integer> t_id;
+    private TableColumn<SampleData2, Integer> t_id;
     @FXML
-    private TableColumn<SampleData, String> t_code;
+    private TableColumn<SampleData2, String> t_code;
     @FXML
-    private TableColumn<SampleData, String> t_mac;
+    private TableColumn<SampleData2, String> t_mac;
 
-    private ObservableList<SampleData> sampleData = FXCollections.observableArrayList();
+    private ObservableList<SampleData2> sampleData = FXCollections.observableArrayList();
 
     private MySqlOp mySql = new MySqlOp();
 
@@ -131,7 +158,7 @@ public class Controller {
                     System.out.println(rs.getInt(1));
                     System.out.println(rs.getString(2));
                     System.out.println(rs.getString(3));
-                    sampleData.add(new SampleData(true, rs.getInt(1), rs.getString(2), rs.getString(3)));
+                    sampleData.add(new SampleData2(true, rs.getInt(1), rs.getString(2), rs.getString(3)));
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
